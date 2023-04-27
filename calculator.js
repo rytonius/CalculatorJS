@@ -2,8 +2,6 @@ export {add, subtract, multiply, divide};
 
 function add (x, y) {
     const symbol = "+"
-    const x = x
-    const y = y
     return x + y;
 }
 

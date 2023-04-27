@@ -40,7 +40,7 @@ AReader();
 //     })
 // });
 app.get('/', async (request, respond) => {
-    response.send( await fs.promises.readFile('./index.html', 'utf8'))
+    respond.send( await fs.promises.readFile('./index.html', 'utf8'))
 });
 // process.env.PORT || 3000
 app.listen(port, () => {

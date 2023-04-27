@@ -1,0 +1,67 @@
+:root {
+    --color-DarkestPurple: #0C0032;
+    --color-DarkPurple: #190061;
+    --color-MedPurple: #240090;
+    --color-LightPurple: #3500D3;
+    --color-Grey: #282828;
+    --calculator-buttonsize: 90px;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-Grey);
+    height: 95lvh;
+}
+
+.calculator {
+    display: grid;
+    grid-template-columns:
+        [left-column] var(--calculator-buttonsize) 
+        [left-mid] var(--calculator-buttonsize)
+        [right-mid] var(--calculator-buttonsize) 
+        [right-column] 120px;
+    grid-template-rows:
+        [display] var(--calculator-buttonsize) 
+        [top-row] var(--calculator-buttonsize) 
+        [top-mid] var(--calculator-buttonsize) 
+        [bottom-mid] var(--calculator-buttonsize) 
+        [bottom-row] var(--calculator-buttonsize);
+    background-color: var(--color-LightPurple);
+    border: var(--color-DarkPurple);
+    border-radius: 4%;
+    border-style: ridge;
+    outline: var(--color-DarkestPurple);
+    outline-style: outset;
+    outline-width: 10%;
+    box-shadow: 13px 8px 5px red;
+
+}
+
+#One {
+    grid-column-start: left-column;
+    grid-row-start: top-row;
+
+}
+
+#Divide {
+    grid-column: right-column;
+    grid-row: bottom-row;
+}
+
+.Display {
+    display: flex;
+    color: aliceblue;
+    align-items: center;
+    justify-content: right;
+    grid-column-start: leftcolumn;
+    grid-row-start: display;
+    grid-column: span 4;
+    padding: 0 5% 0 0;
+    font-size: 200%;
+}
+
+button {
+    font-size: 2em;
+}
